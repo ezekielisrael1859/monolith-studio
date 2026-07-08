@@ -1,0 +1,175 @@
+/* ===== WORKS CASE STUDY PAGE ===== */
+
+.cs-back {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: var(--z-nav);
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: var(--border-width) solid var(--color-line);
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-back a {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.cs-back a:hover { color: var(--color-steel-bright); }
+.cs-back-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: var(--ls-wide);
+  font-size: var(--fs-base);
+  color: var(--color-concrete);
+}
+
+.cs-hero {
+  position: relative;
+  min-height: 90svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.cs-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.cs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(18,18,18,0.95) 0%, rgba(18,18,18,0.2) 50%, rgba(18,18,18,0.55) 100%);
+}
+.cs-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-8) var(--space-3) var(--space-6);
+  width: 100%;
+}
+.cs-hero-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-steel-bright);
+  margin-bottom: var(--space-3);
+}
+.cs-hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xxl);
+  font-weight: 700;
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-tight);
+  color: var(--color-concrete);
+}
+
+.cs-brief {
+  padding: var(--space-7) var(--space-3);
+  border-bottom: var(--border-width) solid var(--color-line-strong);
+}
+.cs-brief-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.cs-brief-text p {
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  color: var(--color-concrete-dim);
+  max-width: 60ch;
+}
+.cs-brief-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+.cs-fact-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-steel-bright);
+  margin-bottom: var(--space-1);
+}
+.cs-fact-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  .cs-brief-grid { flex-direction: row; justify-content: space-between; }
+  .cs-brief-text { width: 55%; }
+  .cs-brief-facts { width: 35%; align-content: start; }
+}
+
+.cs-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cs-gallery img {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+.cs-gallery-caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  color: var(--color-concrete-dim);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-charcoal-2);
+}
+
+.cs-quote {
+  padding: var(--space-7) var(--space-3);
+  background: var(--color-charcoal-2);
+}
+.cs-quote blockquote {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  line-height: var(--lh-normal);
+  max-width: 30ch;
+}
+.cs-quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-steel-bright);
+  margin-top: var(--space-3);
+}
+
+.cs-next {
+  padding: var(--space-8) var(--space-3);
+  text-align: center;
+}
+.cs-next-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-steel-bright);
+  margin-bottom: var(--space-2);
+}
+.cs-next-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.cs-next a:hover .cs-next-title { color: var(--color-steel-bright); }
