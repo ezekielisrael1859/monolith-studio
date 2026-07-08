@@ -1,61 +1,58 @@
 :root {
-  /* Colors */
-  --color-concrete: #EDEBE6;
-  --color-concrete-dim: #E2DFD8;
-  --color-charcoal: #1C1C1C;
-  --color-charcoal-soft: #2A2A2A;
-  --color-steel: #4A5A6A;
-  --color-steel-light: #6B7C8D;
-  --color-line: rgba(28, 28, 28, 0.12);
-  --color-line-strong: rgba(28, 28, 28, 0.25);
+  /* Colors — charcoal dominant, concrete as contrast/text */
+  --color-charcoal: #121212;
+  --color-charcoal-2: #1A1A1A;
+  --color-charcoal-3: #232323;
+  --color-concrete: #F2F0EA;
+  --color-concrete-dim: #B8B5AE;
+  --color-steel: #6B8299;
+  --color-steel-bright: #8FADC4;
+  --color-line: rgba(242, 240, 234, 0.1);
+  --color-line-strong: rgba(242, 240, 234, 0.22);
 
   /* Typography */
   --font-heading: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-body: 'Inter', sans-serif;
 
-  --fs-hero: clamp(3rem, 12vw, 8rem);
-  --fs-xl: clamp(2rem, 6vw, 4rem);
-  --fs-lg: clamp(1.5rem, 4vw, 2.5rem);
-  --fs-md: 1.25rem;
-  --fs-base: 1rem;
-  --fs-sm: 0.875rem;
+  --fs-hero: clamp(3.5rem, 15vw, 11rem);
+  --fs-xxl: clamp(2.5rem, 9vw, 6rem);
+  --fs-xl: clamp(2rem, 6vw, 4.5rem);
+  --fs-lg: clamp(1.6rem, 4.5vw, 2.75rem);
+  --fs-md: 1.35rem;
+  --fs-base: 1.05rem;
+  --fs-sm: 0.9rem;
   --fs-xs: 0.75rem;
 
-  --lh-tight: 1.05;
-  --lh-normal: 1.5;
-  --lh-loose: 1.8;
+  --lh-tight: 0.98;
+  --lh-normal: 1.55;
+  --lh-loose: 1.85;
 
-  --ls-tight: -0.02em;
+  --ls-tight: -0.03em;
   --ls-normal: 0;
   --ls-wide: 0.08em;
-  --ls-wider: 0.16em;
+  --ls-wider: 0.18em;
 
-  /* Spacing (8px base) */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
-  --space-4: 2rem;
-  --space-5: 3rem;
-  --space-6: 4rem;
-  --space-7: 6rem;
-  --space-8: 8rem;
-  --space-9: 12rem;
+  --space-4: 2.25rem;
+  --space-5: 3.5rem;
+  --space-6: 5rem;
+  --space-7: 7.5rem;
+  --space-8: 10rem;
+  --space-9: 14rem;
 
-  /* Layout */
   --container-max: 1440px;
-  --grid-gutter: var(--space-3);
   --border-width: 1px;
 
-  /* Motion */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 200ms;
-  --duration-base: 400ms;
-  --duration-slow: 800ms;
-  --duration-slower: 1200ms;
+  --duration-base: 450ms;
+  --duration-slow: 900ms;
+  --duration-slower: 1400ms;
 
-  /* Z-index */
   --z-nav: 100;
   --z-overlay: 200;
   --z-cursor: 300;
@@ -64,9 +61,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   :root {
-    --duration-fast: 0ms;
-    --duration-base: 0ms;
-    --duration-slow: 0ms;
-    --duration-slower: 0ms;
+    --duration-fast: 0ms; --duration-base: 0ms;
+    --duration-slow: 0ms; --duration-slower: 0ms;
   }
 }
